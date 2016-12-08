@@ -22,8 +22,8 @@ e.g.
 
 All three shells are connected! (can you see why? :)         
 
-`iex(foo@localhost)3> P3C.Algo.run`
-`iex(bar@localhost)1> P3C.Algo.run`
+`iex(foo@localhost)3> P3C.Algo.run`         
+`iex(bar@localhost)1> P3C.Algo.run`         
 `iex(star@localhost)1> P3C.Algo.run`
 
 A different output on each shell should appear :)
