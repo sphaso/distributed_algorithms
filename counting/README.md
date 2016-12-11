@@ -2,8 +2,10 @@
 
 Elixir implementation of Exercise 1, Chapter 2 of `Distributed Algorithms` by `Jukka Suomela`.    
 ```
-We are given a path with some unknown number of nodes. All nodes have to stop and output n, the number of nodes.       
-Design a deterministic distributed algorithm that solves the counting problem in time O(n). You can assume that the nodes have unique identifiers.
+We are given a path with some unknown number of nodes.          
+All nodes have to stop and output n, the number of nodes.       
+Design a deterministic distributed algorithm that solves the counting problem in time O(n).        
+You can assume that the nodes have unique identifiers.
 ```
 
 ## How to use
