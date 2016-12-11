@@ -1,7 +1,7 @@
 # P3C
 
 Elixir implementation of the coloring algorithm in Chapter 1 of `Distributed Algorithms` by `Jukka Suomela`.        
-Since in Elixir, by default, connected nodes form an equivalence relationship, the nodes are not in a path but rather in a Kn graph.     
+Since in Elixir, by default, connected nodes form an equivalence relation, the nodes are not in a path but rather in a Kn graph.     
 
 ## How to use
 
