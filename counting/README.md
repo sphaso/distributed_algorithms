@@ -14,7 +14,7 @@ You can assume that the nodes have unique identifiers.
 - Go to the project's directory
 - run on each shell: `iex --sname {DISTINCT_NAME} --cookie {SECRET} -S mix` where `{DISTINCT_NAME}` is a distinct string for each shell but `{SECRET}` is the same
 - connect each iex shell with `Node.connect :{DISTINCT_NAME}@{HOST}`, the full name corresponds to the iex prompt    
-- IMPORTANT: disconnect non-adjacent nodes (you'll have to decide how the shells correspond to the nodes). By default connected nodes form an equivalence relationship!
+- IMPORTANT: disconnect non-adjacent nodes (you'll have to decide how the shells correspond to the nodes). By default connected nodes form an equivalence relation!
 - run on each iex shell `Counting.Algo.run`. Running the command on one of the endpoint is enough, this is just to demonstrate that it won't matter where the code is executed
 - jump up and down if the output is the number of shells!
 
