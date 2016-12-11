@@ -31,3 +31,6 @@ All three shells are connected in a path! foo <-> bar <-> star
 
 `iex(foo@localhost)3> Counting.Algo.run`         
 `3`
+
+TODO:
+- Allow for late nodes to connect at any point and output an updated number of nodes
