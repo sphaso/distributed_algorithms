@@ -1,24 +1,31 @@
 # Counting
 
-**TODO: Add description**
+Elixir implementation of Exercise 1, Chapter 2 of `Distributed Algorithms` by `Jukka Suomela`.    
+```
+We are given a path with some unknown number of nodes. All nodes have to stop and output n, the number of nodes.       
+Design a deterministic distributed algorithm that solves the counting problem in time O(n). You can assume that the nodes have unique identifiers.
+```
 
-## Installation
+## How to use
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+- Open as many shells as you fancy
+- Go to the project's directory
+- run on each shell: `iex --sname {DISTINCT_NAME} --cookie {SECRET} -S mix` where `{DISTINCT_NAME}` is a distinct string for each shell but `{SECRET}` is the same
+- connect each iex shell with `Node.connect :{DISTINCT_NAME}@{HOST}`, the full name corresponds to the iex prompt    
+- IMPORTANT: disconnect non-adjacent nodes (you'll have to decide how the shells correspond to the nodes). By default connected nodes form an equivalence relationship!
+- run on each iex shell `Counting.Algo.run`. Running the command on one of the endpoint is enough, this is just to demonstrate that it won't matter where the code is executed
+- jump up and down if the output is the number of shells!
 
-  1. Add `counting` to your list of dependencies in `mix.exs`:
+e.g.
 
-    ```elixir
-    def deps do
-      [{:counting, "~> 0.1.0"}]
-    end
-    ```
+`iex --sname foo --cookie secret -S mix`          
+`iex --sname bar --cookie secret -S mix`       
+`iex --sname star --cookie secret -S mix`       
+`iex(foo@localhost)1> Node.connect :bar@localhost`        
+`iex(bar@localhost)1> Node.connect :star@localhost`        
+`iex(foo@localhost)2> Node.disconnect :star@localhost`
 
-  2. Ensure `counting` is started before your application:
+All three shells are connected in a path! foo <-> bar <-> star    
 
-    ```elixir
-    def application do
-      [applications: [:counting]]
-    end
-    ```
-
+`iex(foo@localhost)3> Counting.Algo.run`         
+`3`
